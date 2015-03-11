@@ -10,5 +10,11 @@ module ApplicationHelper
     html
   end
 
+  def my_link_to(object, id, display)
+    html = ""
+    html += "<a href =\"/#{ object }/#{object.send(id)}\">#{object.send(display)}</a>".html_safe
+    html
+  end
 
+  #<a href="/shovels/26">shovel 61 - $84.0</a>
 end
