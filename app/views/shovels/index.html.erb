@@ -1,8 +1,7 @@
 All Shovels
 
 <% @shovels.each do |shovel| %>
-  <p><%= link_to "#{shovel.name} - $#{shovel.price}", shovel_path(shovel) %></p>
-  <p><%= my_link_to(shovel, :id, :name) %></p>
+  <p><%= my_link_to_show(shovel, :id, :name).html_safe %></p>
 <% end %>
 
 <tr class="activeRow">

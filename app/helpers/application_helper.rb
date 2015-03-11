@@ -10,9 +10,9 @@ module ApplicationHelper
     html
   end
 
-  def my_link_to(object, id, display)
+  def my_link_to_show(object, id, display)
     html = ""
-    html += "<a href =\"/#{ object }/#{object.send(id)}\">#{object.send(display)}</a>".html_safe
+    html += "<a href =\"/#{ object.class.to_s.downcase.pluralize }/#{object.send(id)}\">#{object.send(display)}</a>".html_safe
     html
   end
 
