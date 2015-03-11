@@ -1,0 +1,13 @@
+All Shovels
+
+<% @shovels.each do |shovel| %>
+<p><%= link_to "#{shovel.name} - $#{shovel.price}", shovel_path(shovel) %></p>
+<% end %>
+
+<tr class="activeRow">
+  <td><%= my_number_format(@value1) %></td>
+  <td><%= my_number_format(@value2) %></td>
+</tr>
+
+
+<%= dropdown(:shovels, Shovel.all, :id, :name) %>

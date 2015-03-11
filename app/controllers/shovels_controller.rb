@@ -1,7 +1,9 @@
 class ShovelsController < ApplicationController
-  
+
   def index
-    @shovels= Shovels.all
+    @shovels= Shovel.all
+    @value1 = 12.00
+    @value2 = 35.00
   end
 
   def new
