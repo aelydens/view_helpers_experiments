@@ -1,8 +1,4 @@
 module ApplicationHelper
-  def my_number_format(number)
-    number_to_currency(number, separator: "..THISISACUSTOMHELPER..", format: '%n')
-  end
-
   def dropdown(column_name, array, value_method, display_method)
     html = "<select name=\"employment[#{column_name}]\">".html_safe
     array.each do |record|
@@ -14,5 +10,5 @@ module ApplicationHelper
     html
   end
 
-  
+
 end
